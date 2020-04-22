@@ -10,12 +10,12 @@ module.exports = {
     '@storybook/addon-notes/register',
   ],
 };
+// import { configure } from '@storybook/react';
 
-import { configure } from '@storybook/react';
 
-const loaderFn = () => [
-    require('./Welcome.stories'),
-    require('./Button.stories'),
-];
+// const loaderFn = () => [
+//     require('./Welcome.stories'),
+//     require('./Button.stories'),
+// ];
 
-configure(loaderFn, module);
+// configure(loaderFn, module);
