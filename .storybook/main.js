@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../src/**/*.stories.js'],
+  stories: ['../src/components/**/*.stories.js'],
   addons: [
     '@storybook/preset-create-react-app',
     '@storybook/addon-actions',
@@ -10,3 +10,12 @@ module.exports = {
     '@storybook/addon-notes/register',
   ],
 };
+
+import { configure } from '@storybook/react';
+
+const loaderFn = () => [
+    require('./Welcome.stories'),
+    require('./Button.stories'),
+];
+
+configure(loaderFn, module);

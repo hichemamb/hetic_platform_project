@@ -6,8 +6,18 @@ import { withDesign } from 'storybook-addon-designs'
 export default {
   title: 'Button',
   component: Button,
-  decorators: [withDesign]
+  decorators: [withDesign],
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL'
+    }
+  },
+  notes: {
+    disabled: true
+  }
 };
+
 
 export const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
 
@@ -19,7 +29,11 @@ export const Emoji = () => (
   </Button>
 );
 
-export const ButtonBasic = () => <Button onClick={action('Validated')}>Validated</Button> 
+const onClick = (e) => {
+  e.preventDefault();
+  alert('Hello button')
+}
+export const ButtonBasic = () => <Button onClick={ onClick }>Validated</Button> 
 
 ButtonBasic.story = {
     name: 'Button basic',
