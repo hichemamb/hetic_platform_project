@@ -1,3 +1,4 @@
-# cms
+# How to use ?
 
-A quick description of cms.
+- use `yarn start`or `npm start`
+- login
