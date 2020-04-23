@@ -2,17 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-
-// quaternary, quinary, senary, septenary, octonary, nonary,
 const UIColors = {
     primary:{
-        color: '#2F2F2F'
+        color: 'transparent'
     },
     secondary: {
         color: '#F44949'
     },
     tertiary: {
-        color: 'transparent'
+        color: 'green'
     }
 }
 const UISizes = {
