@@ -1,0 +1,27 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { TitleStandard } from './Title.stories';
+import Title from './Title'
+
+
+<Meta title="Atoms | Title" component={TitleStandard} />
+
+# Title
+
+This docs talk about all variant of `Button` component.  You can define color type with: `Primary`, `Secondary` and `Outlined` & define size type with `Small`, `Medium` and `Large`.
+Check the code in clicked to Show code for more details. 
+
+<Preview>
+  <Story 
+    name="Title"
+    parameters={{
+        design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL?node-id=298%3A0'
+    }
+    }}
+    >
+    <TitleStandard color="#FFF"/>
+  </Story>
+</Preview>
+
+<Props of={ Title }/>
