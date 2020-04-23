@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Button from './components/atoms/Button/Button'
 import './App.css';
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
         >
           Learn React
         </a>
+        <br/>
+
+        {/* Here, i get my components atoms created in my storybook  */}
+        <Button children="Start"/>
       </header>
     </div>
   );

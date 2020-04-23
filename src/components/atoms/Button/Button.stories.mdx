@@ -1,0 +1,35 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Primary } from './Button.stories';
+import Button from './Button'
+
+
+<Meta title="Atoms | Button" component={Primary} />
+
+# Button
+
+This docs talk about all variant of `Button` component.  You can define color type with: `Primary`, `Secondary` and `Outlined` & define size type with `Small`, `Medium` and `Large`.
+Check the code in clicked to Show code for more details. 
+
+<Preview>
+  <Story 
+    name="Principle"
+    parameters={{
+        design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL'
+    }
+    }}
+    >
+    <Primary type="primary"/>
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <Button size="small">Small Button</Button>
+  ```
+
+# Props
+
+<Props of={Button} />
