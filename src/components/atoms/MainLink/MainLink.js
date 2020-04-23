@@ -4,15 +4,14 @@ import styled from "styled-components";
 import "../../../assets/fonts/fonts.css";
 // quaternary, quinary, senary, septenary, octonary, nonary,
 
-const fourTimes = (element) => {
-  let array = [];
-  for (let i = 0; i < 4; i++) {
-    array.push(element);
-  }
-  return array;
-};
-
 const MainLink = ({ size, children, type, onClick }) => {
+  const fourTimes = (element) => {
+    let array = [];
+    for (let i = 0; i < 4; i++) {
+      array.push(element);
+    }
+    return array;
+  };
   let newChildren = fourTimes(children);
   return (
     <StyledMainLink>
@@ -63,8 +62,7 @@ const LinkDecoration = styled.span`
 MainLink.displayName = "MainLink";
 
 MainLink.propTypes = {
-  title: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default MainLink;
