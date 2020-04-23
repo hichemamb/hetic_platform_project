@@ -1,0 +1,35 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Default } from './MainLink.stories';
+import MainLink from './MainLink'
+
+
+<Meta title="Atoms | MainLink" component={Default} />
+
+# MainLink
+
+This docs talk about all variant of `MainLink` component.  You can define color type with: `Primary`, `Secondary` and `Outlined` & define size type with `Small`, `Medium` and `Large`.
+Check the code in clicked to Show code for more details. 
+
+<Preview>
+  <Story 
+    name="Principle"
+    parameters={{
+        design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL'
+    }
+    }}
+    >
+      <Default/>
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <MainLink size="small">Link</MainLink>
+  ```
+
+# Props
+
+<Props of={MainLink} />
