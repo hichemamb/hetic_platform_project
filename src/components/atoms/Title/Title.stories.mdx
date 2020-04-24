@@ -1,14 +1,13 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
-import { TitleStandard } from './Title.stories';
+import { TitleDefault, TitleDefaultRight } from './Title.stories';
 import Title from './Title'
 
 
-<Meta title="Atoms | Title" component={TitleStandard} />
+<Meta title="Atoms | Title" component={TitleDefault || TitleDefaultRight} />
 
 # Title
 
-This docs talk about all variant of `Button` component.  You can define color type with: `Primary`, `Secondary` and `Outlined` & define size type with `Small`, `Medium` and `Large`.
-Check the code in clicked to Show code for more details. 
+This docs talk about `Title` component. Check the code in clicked to Show code for more details.
 
 <Preview>
   <Story 
@@ -20,8 +19,21 @@ Check the code in clicked to Show code for more details.
     }
     }}
     >
-    <TitleStandard color="#FFF"/>
+    <div
+    style={{ display: 'flex', justifyContent: 'space-between' }}
+    >
+      <TitleDefault title="He Got the game" text="1996 - Warner Bros. Pictures"/>
+      <TitleDefaultRight title="Space jam" text="1996 - Warner Bros. Pictures" textAlign="right" DirectionBorderRight/>
+    </div>
   </Story>
 </Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <TitleDefault title="He Got the game" text="1996 - Warner Bros. Pictures">Default Title</TitleDefault>
+  <TitleDefaultRight title="Space jam" text="1996 - Warner Bros. Pictures" textAlign="right" DirectionBorderRight>Default Right Title </TitleDefaultRight>
+  ```
+
 
 <Props of={ Title }/>
