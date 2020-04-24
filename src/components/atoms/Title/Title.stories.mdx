@@ -1,9 +1,9 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
-import { TitleStandard } from './Title.stories';
+import { TitleStandardLeft, TitleStandardRight } from './Title.stories';
 import Title from './Title'
 
 
-<Meta title="Atoms | Title" component={TitleStandard} />
+<Meta title="Atoms | Title" component={TitleStandardLeft || TitleStandardRight} />
 
 # Title
 
@@ -20,8 +20,14 @@ Check the code in clicked to Show code for more details.
     }
     }}
     >
-    <TitleStandard color="#FFF"/>
+    <div
+    style={{ display: 'flex', justifyContent: 'space-between' }}
+    >
+      <TitleStandardLeft />
+        <TitleStandardRight />
+    </div>
   </Story>
 </Preview>
+
 
 <Props of={ Title }/>
