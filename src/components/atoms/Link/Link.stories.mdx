@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Active, NotActive } from './Link.stories';
+import Link from './Link'
+
+
+<Meta title="Atoms | Link" component={Active, NotActive} />
+
+# Link
+
+This docs talk about all variant of `Link` component.  You can define if is active width `isActive`  & define `onClick` event.
+Check the code in clicked to Show code for more details. 
+
+<Preview>
+  <Story name="Active">
+    <Active/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Not Active">
+    <NotActive/>
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <Link isActive={false} onClick={onClick}>Link</Link>
+  ```
+
+# Props
+
+<Props of={Link} />
