@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import "../../../assets/fonts/fonts.css";
 
-const Link = ({ children, onClick, isActive }) => (
-  <LinkStyled onClick={onClick} isActive={isActive}>
+const Link = ({ children, onClick, isActive, style }) => (
+  <LinkStyled onClick={onClick} isActive={isActive} style={{ ...style }}>
     {children}
   </LinkStyled>
 );
@@ -22,6 +22,10 @@ const LinkStyled = styled.button`
 `;
 
 Link.displayName = "Link";
+
+Link.defaultProps = {
+  style: {},
+};
 
 Link.propTypes = {
   isActive: PropTypes.bool.isRequired,
