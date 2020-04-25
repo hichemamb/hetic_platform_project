@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import RightArrow from "../../../assets/img/fleche-navigation-droite.svg";
-import LeftArrow from "../../../assets/img/fleche-navigation-gauche.svg";
+import RightArrow from "../../../assets/fleche-navigation-droite.svg";
+import LeftArrow from "../../../assets/fleche-navigation-gauche.svg";
 
 // quaternary, quinary, senary, septenary, octonary, nonary,
 
