@@ -11,30 +11,51 @@ const UIIcon = {
   left: LeftArrow,
 };
 
-const ButtonLink = ({ position, onClick }) => {
-  return <ButtonLinkStyled position={position} onClick={onClick} />;
+const UISize = {
+  default: {
+    width: '30px',
+    height: '30px'
+  },
+  medium: {
+    width: '50px',
+    height: '50px'
+  },
+  large: {
+    width: '70px',
+    height: '70px'
+  },
+}
+
+const ButtonLink = ({ position, onClick, width, height }) => {
+  return <ButtonLinkStyled position={position} width={width} height={height} onClick={onClick} />;
 };
 
 const ButtonLinkStyled = styled.div`
-  background-image: url(${(props) => UIIcon[props.position]});
+  background: url(${(props) => UIIcon[props.position]}) no-repeat center;
+  background-size: cover;
   font-size: 16px;
-  width: 50px;
-  height: 50px;
+  width: ${(props) => UISize[props.width].width};
+  height: ${(props) => UISize[props.height].height};
   cursor: pointer;
   opacity: 0.5;
   transition: 200ms all ease;
   :hover {
     transform: scale(1.1);
+    opacity: 1;
   }
 `;
 
 ButtonLink.displayName = "ButtonLink";
 ButtonLink.defaultProps = {
   position: "left",
+  width: "default",
+  height: "default",
 };
 
 ButtonLink.propTypes = {
   position: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
