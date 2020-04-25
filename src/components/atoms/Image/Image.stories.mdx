@@ -1,0 +1,43 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Large, Small, WithAction } from './Image.stories';
+import Image from './Image'
+
+
+<Meta title="Atoms | Image" component={Image} />
+
+# Image
+
+This docs talk about all variant of `Image` component.  You can define size type with: `small`, `large` & define an action type with `onClicked`.
+
+## Small
+
+<Preview>
+  <Story name="small">
+    <Small/>
+  </Story>
+</Preview>
+
+## Large
+
+<Preview>
+  <Story name="large">
+    <Large/>
+  </Story>
+</Preview>
+
+## With action
+<Preview>
+  <Story name="action">
+    <WithAction/>
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <Image size="small" src="your source"/>
+  ```
+
+# Props
+
+<Props of={Image} />
