@@ -1,0 +1,36 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Default } from './Header.stories';
+import Header from './Header'
+
+
+<Meta title="Organisms | Header" component={Default} />
+
+# Link
+
+This docs talk about all variant of `Header` component.
+
+<Preview>
+  <Story name="Default">
+    <Default/>
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <Header onClickHome={onClickHome}>
+    <Link isActive={true} onClick={onClickLink}>
+      1994
+    </Link>
+    <Link isActive={false} onClick={onClickLink}>
+      2000
+    </Link>
+    <Link isActive={false} onClick={onClickLink}>
+      2002
+    </Link>
+  </Header>
+  ```
+
+# Props
+
+<Props of={Header} />
