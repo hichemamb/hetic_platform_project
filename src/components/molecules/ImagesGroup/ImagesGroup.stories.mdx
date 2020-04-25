@@ -1,0 +1,27 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Default } from './ImagesGroup.stories';
+import ImagesGroup from './ImagesGroup'
+
+
+<Meta title="Atoms | ImagesGroup" component={ImagesGroup} />
+
+# ImagesGroup
+
+This docs talk about all variant of `ImagesGroup` component.  You can define an Array of `sources`.
+
+<Preview>
+  <Story name="Default">
+    <Default/>
+  </Story>
+</Preview>
+
+
+Copied this code directly !
+
+  ```javascript
+  <ImagesGroup src={["pic1.jpeg","pic2.jpg","pic3.jpg"]}/>
+  ```
+
+# Props
+
+<Props of={ImagesGroup} />
