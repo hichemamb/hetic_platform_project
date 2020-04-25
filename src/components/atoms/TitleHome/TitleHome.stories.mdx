@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { TitleHomeDefault } from './TitleHome.stories';
+import TitleHome from './TitleHome'
+
+
+<Meta title="Atoms | TitleHome" component={TitleHomeDefault} />
+
+# Title
+
+This docs talk about `TitleHome` component. Check the code in clicked to Show code for more details.
+
+<Preview>
+    <Story 
+    name="TitleHome"
+    parameters={{
+        design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL?node-id=660%3A510'
+    }
+    }}
+    >
+        <TitleHomeDefault />
+    </Story>    
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+    <TitleHomeDefault background="default"/>
+  ```
+
+
+<Props of={ TitleHome }/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import Button from './components/atoms/Button/Button';
+import TitleHome from './components/atoms/TitleHome/TitleHome';
 import './App.css';
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         <br/>
 
         {/* Here, i get my components atoms created in my storybook  */}
-        <Button children="Start"/>
+        {/* <Button children="Start"/>
+        <TitleHome /> */}
       </header>
     </div>
   );
