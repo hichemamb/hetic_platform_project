@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { TitleGroupDefault } from './TitleGroup.stories';
+import TitleGroup from './TitleGroup'
+
+
+<Meta title="Molecules | Title Group" component={TitleGroupDefault} />
+
+# Title
+
+This docs talk about `TitleGroupDefault` component. Check the code in clicked to Show code for more details.
+
+<Preview>
+  <Story 
+    name="Title and Subtext"
+    parameters={{
+        design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL?node-id=298%3A0'
+    }
+    }}
+    >
+      <TitleGroupDefault />
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+  ```javascript
+  <TitleGroupDefault >
+  ```
+
+
+<Props of={ TitleGroup }/>

@@ -14,70 +14,52 @@ const UIFSize = {
         fontSize: '60px',
     },
 }
-const UIColors = {
-    primary:{
-        color: '#ffffff',
-    },
-}
 
-const Title = ({color, size, title, text, textAlign, DirectionBorderLeft, DirectionBorderRight  }) => {
+const Title = ({size, title, showLine="none" }) => {
     return(
-        <StyledTitle 
-        color={color} 
-        size={size}
-        textAlign={textAlign}
-        left={DirectionBorderLeft}
-        right={DirectionBorderRight}
-        > { title }
-            <StyledSubTitle 
-            text={text}>{ text }
-            </StyledSubTitle>
-        </StyledTitle>
+        <TitleStyledContainer>
+            <TitleStyled size={size} showLine={ showLine }
+            > { title }
+            </TitleStyled>
+            {/* <TitleStyled size="small"
+            > { text }
+            </TitleStyled> */}
+            
+        </TitleStyledContainer>
     )
 }
 
-const StyledTitle = styled.h1`
-    color: ${props => UIColors[props.color].color};
+const TitleStyledContainer = styled.div`
+    position: relative;
+    width: 50%;
+    text-align: right;
+`;
+const TitleStyled = styled.span`
+    color: #ffffff;
     text-transform: capitalize;
-    text-align: ${props => props.textAlign};
     font-size: ${props => UIFSize[props.size].fontSize};
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
-    width: 50%;
-    line-height: 41px;
-    position: relative;
+    line-height: 40px;
     ::after {
         content: '';
         background-color: #ffffff;
         position: absolute;
-        right: ${props => props.right ? '0' : 'initial'};
-        left: ${props => props.left || 'initial'};
+        right: 0;
         width: 100px;
         height: 1px;
-        bottom: 0
+        bottom: -15px;
+        display: ${(props) => props.showLine};
     }
-`;
-
-const StyledSubTitle = styled.h4`
-    text-transform: capitalize;
-    font-size: 14px;
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 700;
 `;
 
 Title.displayName = 'Title';
 Title.defaultProps = {
     size: 'large',
-    color: 'primary',
-    textAlign: 'left'
 };
 
 Title.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large']),
-    color: PropTypes.oneOf(['primary']),
-    textAlign: PropTypes.oneOf(['left' | 'right']),
-    DirectionBorderRight: PropTypes.oneOf(['right']),
-    DirectionBorderLeft: PropTypes.oneOf(['left']),
     children: PropTypes.element.isRequired
 };
 

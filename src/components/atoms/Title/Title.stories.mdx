@@ -1,9 +1,9 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
-import { TitleDefault, TitleDefaultRight } from './Title.stories';
+import { TitleDefault } from './Title.stories';
 import Title from './Title'
 
 
-<Meta title="Atoms | Title" component={TitleDefault || TitleDefaultRight} />
+<Meta title="Atoms | Title" component={TitleDefault} />
 
 # Title
 
@@ -19,12 +19,7 @@ This docs talk about `Title` component. Check the code in clicked to Show code f
     }
     }}
     >
-    <div
-    style={{ display: 'flex', justifyContent: 'space-between' }}
-    >
       <TitleDefault title="He Got the game" text="1996 - Warner Bros. Pictures"/>
-      <TitleDefaultRight title="Space jam" text="1996 - Warner Bros. Pictures" textAlign="right" DirectionBorderRight/>
-    </div>
   </Story>
 </Preview>
 
@@ -32,7 +27,6 @@ Copied this code directly !
 
   ```javascript
   <TitleDefault title="He Got the game" text="1996 - Warner Bros. Pictures">Default Title</TitleDefault>
-  <TitleDefaultRight title="Space jam" text="1996 - Warner Bros. Pictures" textAlign="right" DirectionBorderRight>Default Right Title </TitleDefaultRight>
   ```
 
 
