@@ -15,7 +15,8 @@ const TextContent = ({ position, children }) => {
 const TextContentStyled = styled.div`
   word-break: break-word;
   font-size: 16px;
-  padding: 24px;
+  margin: 0;
+  padding: 0 16px;
   text-align: ${(props) => UIPosition[props.position]};
   font-family: Open Sans;
   font-weight: 300;

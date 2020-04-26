@@ -1,0 +1,28 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Default } from './MainContent.stories';
+import MainContent from './MainContent'
+
+
+<Meta title="Organisms | MainContent" component={Default} />
+
+# MainContent
+
+This docs talk about all variant of `MainContent` component.
+
+<Preview>
+  <Story name="Default">
+    <Default/>
+  </Story>
+</Preview>
+
+Copied this code directly !
+
+```javascript
+<MainContent title="Title" subText="subText">
+ Main content here !
+</MainContent>
+```
+
+# Props
+
+<Props of={MainContent} />
