@@ -4,9 +4,9 @@ import TitleGroup from "../../molecules/TitleGroup/TitleGroup";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const MainContent = ({ children, size, position, title, subtitle }) => (
+const MainContent = ({ children, size, position, title, subText }) => (
   <MainContentStyled>
-    <TitleGroup title={title} size={size} />
+    <TitleGroup title={title} subText={subText} size={size} />
     <TextContent position={position}>{children}</TextContent>
   </MainContentStyled>
 );
@@ -33,6 +33,8 @@ MainContent.defaultProps = {
 
 MainContent.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
+  title: PropTypes.string.isRequired,
+  subText: PropTypes.string.isRequired,
   position: PropTypes.oneOf(["left,right"]),
   children: PropTypes.element.isRequired,
 };

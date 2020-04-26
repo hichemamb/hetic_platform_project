@@ -2,7 +2,7 @@ import React from "react";
 import MainContent from "./MainContent";
 
 export const Default = () => (
-  <MainContent>
+  <MainContent title="This is my title" subText="This is my subText">
     {" "}
     <p>
       Le 17 février 1963, à Brooklyn, New York, Michael Jeffrey Jordan arrive

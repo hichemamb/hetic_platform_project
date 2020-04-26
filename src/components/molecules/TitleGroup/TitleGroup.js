@@ -3,30 +3,14 @@ import PropTypes from "prop-types";
 import Title from "../../atoms/Title/Title";
 import "../../../assets/fonts/font.css";
 
-<<<<<<< HEAD
-const TitleGroup = ({title, subText, size, sizeSubText="small"}) => {
-    return(
-        <>
-            <Title title={title}  size={size}/>
-            <Title title={subText}  size={sizeSubText}  showLine="block"/>
-        </>
-    )
-}
-
-=======
-const TitleGroup = () => {
+const TitleGroup = ({ title, subText, size, sizeSubText = "small" }) => {
   return (
     <>
-      <Title title="Space Jam" size="large" />
-      <Title
-        title="1996 - Warner Bros. Pictures"
-        size="small"
-        showLine="block"
-      />
+      <Title title={title} size={size} />
+      <Title title={subText} size={sizeSubText} showLine="block" />
     </>
   );
 };
->>>>>>> [Front](add features)
 
 TitleGroup.displayName = "TitleGroup";
 TitleGroup.defaultProps = {
