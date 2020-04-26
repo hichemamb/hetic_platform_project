@@ -2,13 +2,13 @@ import React from 'react';
 import Button from './Button';
 
 export const Small = () => (
-  <Button size="small" onClick={ onClickButton } testid="primary-button"> Primary </Button>
+  <Button size="small" type="primary" onClick={ onClickButton } testid="primary-button">Medium</Button> 
 );
 export const Medium = () => (
-  <Button type="secondary" size="medium" onClick={ onClickButton }> Secondary </Button>
+  <Button size="medium"  type="primary" onClick={ onClickButton} >Medium</Button> 
 );
 export const Large = () => (
-  <Button type="tertiary" size="large" onClick={ onClickButton }> Tertiary </Button>
+  <Button size="large" type="primary" onClick={ onClickButton } >Medium</Button> 
 );
 
 const onClickButton = (e) => {

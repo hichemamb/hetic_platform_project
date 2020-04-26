@@ -18,7 +18,7 @@ const UISizes = {
         width: '133px'
     },
     medium: {
-        width: '100px'
+        width: '160px'
     },
     large: {
         width: '200px'
@@ -58,9 +58,9 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
- type: PropTypes.oneOf(['primary, secondary, tertiary']),
  size: PropTypes.oneOf(['small', 'medium', 'large']),
- children: PropTypes.element.isRequired,
+ type: PropTypes.string.isRequired,
+ children: PropTypes.string.isRequired,
  onClick: PropTypes.func.isRequired
 };
 
