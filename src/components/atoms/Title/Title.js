@@ -15,16 +15,12 @@ const UIFSize = {
     },
 }
 
-const Title = ({size, title, showLine="none" }) => {
+const Title = ({size, title="Default", showLine="none" }) => {
     return(
         <TitleStyledContainer>
             <TitleStyled size={size} showLine={ showLine }
             > { title }
             </TitleStyled>
-            {/* <TitleStyled size="small"
-            > { text }
-            </TitleStyled> */}
-            
         </TitleStyledContainer>
     )
 }

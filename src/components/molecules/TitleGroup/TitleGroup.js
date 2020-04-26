@@ -4,11 +4,11 @@ import Title from '../../atoms/Title/Title'
 import '../../../assets/fonts/font.css'
 
 
-const TitleGroup = () => {
+const TitleGroup = ({title, subText, size, sizeSubText="small"}) => {
     return(
         <>
-            <Title title="Space Jam"  size="large"/>
-            <Title title="1996 - Warner Bros. Pictures"  size="small"  showLine="block"/>
+            <Title title={title}  size={size}/>
+            <Title title={subText}  size={sizeSubText}  showLine="block"/>
         </>
     )
 }
