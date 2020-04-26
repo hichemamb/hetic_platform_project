@@ -1,8 +1,14 @@
 import React from "react";
 import MainContent from "./MainContent";
-
+import image1 from "../../../assets/img/michael-jordan-space-jam.jpg";
+import image2 from "../../../assets/img/SmithCenter_Splashscreen.jpeg";
+import image3 from "../../../assets/img/he_got_game_-_h_-_1998.jpg";
 export const Default = () => (
-  <MainContent title="This is my title" subText="This is my subText">
+  <MainContent
+    title="This is my title"
+    subText="This is my subText"
+    sources={[image1, image2, image3]}
+  >
     {" "}
     <p>
       Le 17 février 1963, à Brooklyn, New York, Michael Jeffrey Jordan arrive

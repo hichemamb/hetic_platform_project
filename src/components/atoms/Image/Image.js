@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 const UISizes = {
   small: {
-    width: "100px",
-    height: "100px",
+    width: "100px !important",
+    height: "100px !important",
   },
   large: {
-    width: "800px",
+    width: "100%",
     height: "550px",
   },
 };
