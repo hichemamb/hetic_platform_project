@@ -25,9 +25,9 @@ const UISizes = {
     }
 }
 
-const Button = ({size, children, type, onClick}) => {
+const Button = ({size, children, type, onClick, dataTestid}) => {
     return(
-        <StyledButton size={size} type={type} onClick={onClick}> { children } </StyledButton>
+        <StyledButton size={size} type={type} onClick={onClick} data-testid={dataTestid}> { children } </StyledButton>
     )
 }
 
