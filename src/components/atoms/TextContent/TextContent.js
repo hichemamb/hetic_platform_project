@@ -8,8 +8,12 @@ const UIPosition = {
   right: "right",
 };
 
-const TextContent = ({ position, children }) => {
-  return <TextContentStyled position={position}>{children}</TextContentStyled>;
+const TextContent = ({ position, children, testid }) => {
+  return (
+    <TextContentStyled position={position} data-testid={testid}>
+      {children}
+    </TextContentStyled>
+  );
 };
 
 const TextContentStyled = styled.div`
@@ -46,8 +50,9 @@ TextContent.defaultProps = {
 };
 
 TextContent.propTypes = {
-  position: PropTypes.oneOf(["left,right"]),
-  children: PropTypes.element.isRequired,
+  position: PropTypes.oneOf(["left", "right"]),
+  children: PropTypes.node.isRequired,
+  testid: PropTypes.string.isRequired,
 };
 
 export default TextContent;

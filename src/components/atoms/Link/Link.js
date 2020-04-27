@@ -3,8 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import "../../../assets/fonts/fonts.css";
 
-const Link = ({ children, onClick, isActive, style }) => (
-  <LinkStyled onClick={onClick} isActive={isActive} style={{ ...style }}>
+const Link = ({ children, onClick, isActive, style, testid }) => (
+  <LinkStyled
+    onClick={onClick}
+    isActive={isActive}
+    style={{ ...style }}
+    data-testid={testid}
+  >
     {children}
   </LinkStyled>
 );
@@ -29,7 +34,8 @@ Link.defaultProps = {
 
 Link.propTypes = {
   isActive: PropTypes.bool.isRequired,
-  children: PropTypes.element.isRequired,
+  testid: PropTypes.string,
+  children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

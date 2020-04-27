@@ -1,14 +1,18 @@
 import React from "react";
 import Image from "./Image";
-import src from "../../../assets/img/michael-jordan-space-jam.jpg";
 
-const onClickImage = (e) => {
-  e.preventDefault();
-  alert("Hello button");
-};
+export const Large = (props) => (
+  <Image size="large" src={props.src} testid="image-large" />
+);
+export const Small = (props) => (
+  <Image size="small" src={props.src} testid="image-small" />
+);
 
-export const Large = () => <Image size="large" src={src} />;
-export const Small = () => <Image size="small" src={src} />;
-export const WithAction = () => (
-  <Image size="small" onClick={onClickImage} src={src} />
+export const WithAction = (props) => (
+  <Image
+    size="small"
+    onClick={props.onClick}
+    src={props.src}
+    testid="image-withaction"
+  />
 );

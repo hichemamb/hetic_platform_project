@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Image from "../../atoms/Image/Image";
 
-const ImagesGroup = ({ sources }) => {
+const ImagesGroup = ({ sources, testid }) => {
   const [mainSource, setMainSource] = useState(sources[0]);
   const withoutImageSelected = sources.filter(
     (source) => source !== mainSource
@@ -12,13 +12,14 @@ const ImagesGroup = ({ sources }) => {
   const changeSource = (s) => setMainSource(s);
 
   return (
-    <ImagesGroupParentStyled>
-      <Image size="large" src={mainSource} />
+    <ImagesGroupParentStyled data-testid={testid}>
+      <Image size="large" src={mainSource} testid="image" />
       <ImagesGroupStyled>
         {withoutImageSelected.map((source) => (
           <Image
             size="small"
             src={source}
+            testid="image"
             onClick={() => changeSource(source)}
           />
         ))}
@@ -43,6 +44,7 @@ ImagesGroup.displayName = "ImagesGroup";
 
 ImagesGroup.propTypes = {
   sources: PropTypes.array.isRequired,
+  testid: PropTypes.string,
 };
 
 export default ImagesGroup;

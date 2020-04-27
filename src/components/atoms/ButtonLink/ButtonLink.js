@@ -13,21 +13,29 @@ const UIIcon = {
 
 const UISize = {
   default: {
-    width: '30px',
-    height: '30px'
+    width: "30px",
+    height: "30px",
   },
   medium: {
-    width: '50px',
-    height: '50px'
+    width: "50px",
+    height: "50px",
   },
   large: {
-    width: '70px',
-    height: '70px'
+    width: "70px",
+    height: "70px",
   },
-}
+};
 
-const ButtonLink = ({ position, onClick, width, height }) => {
-  return <ButtonLinkStyled position={position} width={width} height={height} onClick={onClick} />;
+const ButtonLink = ({ position, onClick, width, height, testid }) => {
+  return (
+    <ButtonLinkStyled
+      position={position}
+      width={width}
+      height={height}
+      onClick={onClick}
+      data-testid={testid}
+    />
+  );
 };
 
 const ButtonLinkStyled = styled.div`
@@ -56,6 +64,7 @@ ButtonLink.propTypes = {
   position: PropTypes.string.isRequired,
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
+  testid: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
 

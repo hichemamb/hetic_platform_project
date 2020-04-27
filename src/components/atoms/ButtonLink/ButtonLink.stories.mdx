@@ -1,9 +1,9 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
-import { Left, Right } from './ButtonLink.stories';
+import { Left,SmallLeft, Right,SmallRight } from './ButtonLink.stories';
 import ButtonLink from './ButtonLink'
 
 
-<Meta title="Atoms | ButtonLink" component={ButtonLink} />
+<Meta title="Atoms | ButtonLink" component={Left} />
 
 # ButtonLink
 
@@ -11,20 +11,30 @@ This docs talk about all variant of `ButtonLink` component.  You can define posi
 
 <Preview>
   <Story name="left">
-      <Left />
+    <div style={{display:"flex",width:"200px",justifyContent:"space-between"}}>
+    <Left onClick={()=>alert("hello")} />
+    <SmallLeft onClick={()=>alert("hello")} />
+    </div>
   </Story>
 </Preview>
 
 <Preview>
   <Story name="right">
-      <Right />
+    <div style={{display:"flex", width:"200px",justifyContent:"space-between"}}>
+     <Right onClick={()=>alert("hello")}/>
+     <SmallRight onClick={()=>alert("hello")}/>
+    </div>
   </Story>
 </Preview>
 
 Copied this code directly !
 
   ```javascript
-  <ButtonLink />
+  <ButtonLink
+    position="left"
+    width="default"
+    height="default"
+    onClick={()=>alert("hello")}/>
   ```
 
 # Props
