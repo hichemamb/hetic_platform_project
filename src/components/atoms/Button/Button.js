@@ -25,9 +25,14 @@ const UISizes = {
     }
 }
 
-const Button = ({size, children, type, onClick, dataTestid}) => {
+const Button = ({size, children, type, onClick, testid}) => {
     return(
-        <StyledButton size={size} type={type} onClick={onClick} data-testid={dataTestid}> { children } </StyledButton>
+        <StyledButton 
+            size={size}
+            type={type} 
+            onClick={onClick} 
+            data-testid={testid}> { children } 
+        </StyledButton>
     )
 }
 
@@ -58,9 +63,10 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
- size: PropTypes.oneOf(['small', 'medium', 'large']),
+ size: PropTypes.string.isRequired,
  type: PropTypes.string.isRequired,
  children: PropTypes.string.isRequired,
+ testid: PropTypes.string,
  onClick: PropTypes.func.isRequired
 };
 
