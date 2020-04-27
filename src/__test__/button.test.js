@@ -23,15 +23,23 @@ describe('Renders Button component', () => {
         expect(button).toHaveStyleRule("background-color", "transparent");
         button.click();
         expect(spy).toHaveBeenCalledTimes(1);
-        // const { getByTestId } = render(<Small />, <Medium />);
-        // const getElement = getByTestId;
-        // expect(getElement).toBeTruthy();
-        // let smallTestId = getElement('small-button');
-        // expect(smallTestId).toHaveTextContent('Small');
-        // expect(smallTestId).toHaveStyle(`font-size: 16px; width: 133px`);
-
-        // // Test of medium button
-        // let mediumTestId = getElement('medium-button');
-        // expect(mediumTestId).toHaveStyle(`width: 160px`)
+    });
+    test('with a medium size', () => {
+        const { container, getByTestId } = render(<Medium onClick={spy} />);
+        expect(container).toBeTruthy();
+        const button = getByTestId("button-medium");
+        expect(button).toHaveStyleRule("width", "160px");
+        expect(button).toHaveStyleRule("background-color", "transparent");
+        button.click();
+        expect(spy).toHaveBeenCalledTimes(1);
+    });
+    test('with a large size', () => {
+        const { container, getByTestId } = render(<Large onClick={spy} />);
+        expect(container).toBeTruthy();
+        const button = getByTestId("button-large");
+        expect(button).toHaveStyleRule("width", "200px");
+        expect(button).toHaveStyleRule("background-color", "transparent");
+        button.click();
+        expect(spy).toHaveBeenCalledTimes(1);
     });
 });
