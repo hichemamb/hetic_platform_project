@@ -12,9 +12,9 @@ const UISizes = {
     height: "550px",
   },
 };
-const Image = ({ onClick, src, size, style }) => {
+const Image = ({ onClick, src, size, testid }) => {
   return (
-    <ImageStyled onClick={onClick} src={src} size={size} style={{ ...style }} />
+    <ImageStyled onClick={onClick} src={src} size={size} data-testid={testid} />
   );
 };
 
@@ -29,12 +29,11 @@ const ImageStyled = styled.div`
 Image.displayName = "Image";
 Image.defaultProps = {
   size: "small",
-  style: {},
 };
 
 Image.propTypes = {
   size: PropTypes.oneOf(["small", "large"]),
-  style: PropTypes.string,
+  testid: PropTypes.string,
   src: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };

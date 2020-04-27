@@ -4,7 +4,7 @@ import styled from "styled-components";
 import "../../../assets/fonts/fonts.css";
 // quaternary, quinary, senary, septenary, octonary, nonary,
 
-const MainLink = ({ size, children, type, onClick }) => {
+const MainLink = ({ size, children, type, onClick, testid }) => {
   const fourTimes = (element) => {
     let array = [];
     for (let i = 0; i < 4; i++) {
@@ -12,10 +12,12 @@ const MainLink = ({ size, children, type, onClick }) => {
     }
     return array;
   };
-  let newChildren = fourTimes(children);
+  let newChildren = fourTimes(children, onClick);
   return (
     <StyledMainLink>
-      <Link>{children} </Link>
+      <Link data-testid={testid} onClick={onClick}>
+        {children}{" "}
+      </Link>
       {newChildren
         .map((_, i) => (
           <LinkDecoration key={i} opacity={i / newChildren.length}>
@@ -46,6 +48,7 @@ const Link = styled.span`
   -webkit-text-stroke: 1px white;
   color: none;
   transition: 200ms all ease;
+  cursor: pointer;
   :hover {
     transform: scale(1.1);
   }
@@ -62,7 +65,9 @@ const LinkDecoration = styled.span`
 MainLink.displayName = "MainLink";
 
 MainLink.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
+  testid: PropTypes.string,
 };
 
 export default MainLink;
