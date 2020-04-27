@@ -15,11 +15,13 @@ const UIFSize = {
     },
 }
 
-const Title = ({size, title="Default", showLine="none" }) => {
+const Title = ({size, title="Default", showLine="none", testid }) => {
     return(
         <TitleStyledContainer>
-            <TitleStyled size={size} showLine={ showLine }
-            > { title }
+            <TitleStyled 
+                size={size} 
+                showLine={ showLine }
+                data-testid={testid}> { title }
             </TitleStyled>
         </TitleStyledContainer>
     )
@@ -52,10 +54,14 @@ const TitleStyled = styled.span`
 Title.displayName = 'Title';
 Title.defaultProps = {
     size: 'large',
+    title: 'Défault',
+    showLine: 'none'
 };
 
 Title.propTypes = {
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    showLine: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired
 };
 

@@ -18,16 +18,21 @@ const UISizes = {
         width: '133px'
     },
     medium: {
-        width: '100px'
+        width: '160px'
     },
     large: {
         width: '200px'
     }
 }
 
-const Button = ({size, children, type, onClick}) => {
+const Button = ({size, children, type, onClick, testid}) => {
     return(
-        <StyledButton size={size} type={type} onClick={onClick}> { children } </StyledButton>
+        <StyledButton 
+            size={size}
+            type={type} 
+            onClick={onClick} 
+            data-testid={testid}> { children } 
+        </StyledButton>
     )
 }
 
@@ -58,9 +63,10 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
- type: PropTypes.oneOf(['primary, secondary, tertiary']),
- size: PropTypes.oneOf(['small', 'medium', 'large']),
- children: PropTypes.element.isRequired,
+ size: PropTypes.string.isRequired,
+ type: PropTypes.string.isRequired,
+ children: PropTypes.string.isRequired,
+ testid: PropTypes.string,
  onClick: PropTypes.func.isRequired
 };
 

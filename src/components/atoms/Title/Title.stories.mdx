@@ -1,5 +1,10 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
-import { TitleDefault } from './Title.stories';
+import { 
+  TitleDefault,
+  TitleMedium,
+  TitleSmall,
+  TitleWithLine
+} from './Title.stories';
 import Title from './Title'
 
 
@@ -11,22 +16,47 @@ This docs talk about `Title` component. Check the code in clicked to Show code f
 
 <Preview>
   <Story 
-    name="Title"
-    parameters={{
-        design: {
-        type: 'figma',
-        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL?node-id=298%3A0'
-    }
-    }}
+    name="Title default"
     >
-      <TitleDefault title="He Got the game" text="1996 - Warner Bros. Pictures"/>
+      <TitleDefault 
+        size="small"/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story 
+    name="Title medium"
+    >
+      <TitleMedium 
+        size="medium"/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story 
+    name="Title small"
+    >
+      <TitleSmall 
+        size="small"/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story 
+    name="Title with line"
+    >
+      <TitleWithLine 
+        size="small"
+        showLine="block"/>
   </Story>
 </Preview>
 
 Copied this code directly !
 
   ```javascript
-  <TitleDefault title="He Got the game" text="1996 - Warner Bros. Pictures">Default Title</TitleDefault>
+  <TitleDefault 
+    title="He Got the game" 
+    size="small" />
   ```
 
 

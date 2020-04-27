@@ -1,17 +1,27 @@
 import React from 'react';
 import Button from './Button';
 
-export const Small = () => (
-  <Button size="small" onClick={ onClickButton } testid="primary-button"> Primary </Button>
+export const Small = ({onClick}) => (
+  <Button 
+    size="small" 
+    type="primary" 
+    onClick={ onClick } 
+    testid="button-small"> Small
+  </Button> 
 );
-export const Medium = () => (
-  <Button type="secondary" size="medium" onClick={ onClickButton }> Secondary </Button>
+export const Medium = ({onClick}) => (
+  <Button 
+    size="medium"  
+    type="primary" 
+    onClick={ onClick} 
+    testid="button-medium"> Medium
+  </Button> 
 );
-export const Large = () => (
-  <Button type="tertiary" size="large" onClick={ onClickButton }> Tertiary </Button>
+export const Large = ({onClick}) => (
+  <Button 
+    size="large" 
+    type="primary" 
+    onClick={ onClick } 
+    testid="button-large" > Large
+  </Button> 
 );
-
-const onClickButton = (e) => {
-  e.preventDefault();
-  alert('Hello button')
-}

@@ -12,22 +12,51 @@ Check the code in clicked to Show code for more details.
 
 <Preview>
   <Story 
-    name="Principle"
-    parameters={{
-        design: {
-        type: 'figma',
-        url: 'https://www.figma.com/file/8RQyaZMzX69cDcejSonfEb/Projet-Hetic-SCHOOL'
-    }
-    }}
+    name="Small default"
     >
-    <Small  type="primary" size="small"/>
+    <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+      <Small 
+        size="small"
+        type="primary"
+        onClick={()=>alert("hello small button")}/>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story 
+    name="Medium"
+    >
+    <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+      <Medium
+        size="medium"
+        type="primary"
+        onClick={()=>alert("hello medium button")}/>
+    </div>
+  </Story>
+</Preview>
+
+
+<Preview>
+  <Story 
+    name="Large"
+    >
+    <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+      <Large 
+        size="large"
+        type="primary"
+        onClick={()=>alert("hello large button")}/>
+    </div>
   </Story>
 </Preview>
 
 Copied this code directly !
 
   ```javascript
-  <Button size="small">Small Button</Button>
+  <Button 
+    size="small"
+    type="primary"
+    onClick={()=>alert("hello small button")} />
   ```
 
 # Props
