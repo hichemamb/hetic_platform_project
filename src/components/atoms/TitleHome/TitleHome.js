@@ -9,13 +9,21 @@ const UIBackground = {
 }
 
 
-const TitleHome = ({background}) => {
+const TitleHome = ({background, title, testid, testidTitle, testidDiscover}) => {
     return(
         <div >
-            <TitleHomeContainer background={ background }>
-                <div style={{ width: '80%', margin: '0 auto' }}>
-                    <TitleHomeStyled>Micheal Jordan</TitleHomeStyled>
-                    <TitleHomeDiscover>United Center Chicago Bulls <br/> West Madison Street, Chicago <br/> États-Unis </TitleHomeDiscover>
+            <TitleHomeContainer 
+                background={ background } 
+                data-testid={testid}>
+                <div style={{ 
+                    width: '80%', 
+                    margin: '0 auto' 
+                    }}>
+                    <TitleHomeStyled
+                        data-testid={testidTitle}
+                        >{ title }</TitleHomeStyled>
+                    <TitleHomeDiscover
+                        data-testid={testidDiscover}>United Center Chicago Bulls <br/> West Madison Street, Chicago <br/> États-Unis </TitleHomeDiscover>
                 </div>
             </TitleHomeContainer>
         </div>
@@ -51,11 +59,12 @@ const TitleHomeDiscover = styled.p`
 TitleHome.displayName = 'TitleHome';
 TitleHome.defaultProps = {
     background: 'default',
+    title: 'undefined'
 };
 
 TitleHome.propTypes = {
-    background: PropTypes.oneOf(['by default the value of the background is "default", to change the value, add your image url']),
-    children: PropTypes.element.isRequired
+    background: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 };
 
 export default TitleHome;
