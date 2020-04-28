@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import DataContext from "../../DataContext";
+import DataContext from "../DataContext";
 
-const Navigation = () => {
+const Home = () => {
   return (
     <DataContext.Consumer>
       {(props) => (
-        <NavigationStyled>
+        <HomeStyled>
           <p>{props.data.content}</p>
           <p>{props.data.loading}</p>
-          <p>Navigation</p>
-        </NavigationStyled>
+          <p>Home</p>
+        </HomeStyled>
       )}
     </DataContext.Consumer>
   );
 };
 
-const NavigationStyled = styled.div`
+const HomeStyled = styled.div`
   color: red;
 `;
 
-export default Navigation;
+export default Home;

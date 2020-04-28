@@ -5,10 +5,10 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Home from "./components/layouts/Home";
-import Loading from "./components/layouts/Loading";
-import Navigation from "./components/layouts/Navigation";
-import NavigationDetail from "./components/layouts/NavigationDetail";
+import Home from "./views/Home";
+import Loading from "./views/Loading";
+import Navigation from "./views/Navigation";
+import NavigationDetail from "./views/NavigationDetail";
 import SecureRouter from "./components/layouts/SecureRouter";
 
 const App = () => {

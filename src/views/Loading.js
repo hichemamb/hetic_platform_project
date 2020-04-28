@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import DataContext from "../../DataContext";
+import DataContext from "../DataContext";
 
-const NavigationDetail = () => {
+const Loading = () => {
   return (
     <DataContext.Consumer>
       {(props) => (
-        <NavigationDetailStyled>
+        <LoadingStyled>
           <p>{props.data.content}</p>
           <p>{props.data.loading}</p>
-          <p>NavigationDetail</p>
-        </NavigationDetailStyled>
+          <p>Loading</p>
+        </LoadingStyled>
       )}
     </DataContext.Consumer>
   );
 };
 
-const NavigationDetailStyled = styled.div`
+const LoadingStyled = styled.div`
   color: red;
 `;
 
-export default NavigationDetail;
+export default Loading;
