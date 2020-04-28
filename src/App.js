@@ -22,11 +22,11 @@ const App = () => {
           <Route path="/loading">
             <Loading />
           </Route>
-          <Route path="/navigation/">
-            <Navigation />
-          </Route>
           <Route path="/navigation/:element/:id">
             <NavigationDetail />
+          </Route>
+          <Route path="/navigation/">
+            <Navigation />
           </Route>
           <Route path="*">
             <Redirect to="/" />

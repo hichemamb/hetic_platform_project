@@ -8,9 +8,11 @@ const Main = ({ src, logo, children, backgroundColor }) => {
   let history = useHistory();
   return (
     <MainStyled src={src} logo={logo} backgroundColor={backgroundColor}>
-      <Link isActive onClick={() => history.push("/home")}>
-        MJ23
-      </Link>
+      <div className="mainlink">
+        <Link isActive onClick={() => history.push("/home")}>
+          MJ23
+        </Link>
+      </div>
       <div>{children}</div>
     </MainStyled>
   );
@@ -28,8 +30,8 @@ const MainStyled = styled.div`
     ),
     url(${(props) => props.src});
   background-size: cover;
-  button:first-of-type {
-    position: absolute;
+  .mainlink {
+    position: fixed;
     z-index: 999px;
     top: 30px;
     left: 24px;
