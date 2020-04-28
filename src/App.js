@@ -1,33 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import Button from './components/atoms/Button/Button';
-import TitleHome from './components/atoms/TitleHome/TitleHome';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Home from "./components/layouts/Home";
+import Loading from "./components/layouts/Loading";
+import Navigation from "./components/layouts/Navigation";
+import NavigationDetail from "./components/layouts/NavigationDetail";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <br/>
-
-        {/* Here, i get my components atoms created in my storybook  */}
-        {/* <Button children="Start"/>
-        <TitleHome /> */}
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/loading">
+            <Loading />
+          </Route>
+          <Route path="/navigation/">
+            <Navigation />
+          </Route>
+          <Route path="/navigation/:element/:id">
+            <NavigationDetail />
+          </Route>
+          <Route path="*">
+            <Redirect to="/" />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
