@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import DataContext from "../../DataContext";
-import { Route, Redirect, useHistory } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 const Home = ({ path, children, ...el }) => {
   return (
