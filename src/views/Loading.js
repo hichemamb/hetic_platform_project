@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import DataContext from "../DataContext";
 import Main from "../components/layouts/Main";
+import background from "../assets/img/michael-jordan-space-jam.jpg";
+
 const Loading = () => {
   return (
     <DataContext.Consumer>
       {(props) => (
-        <Main>
+        <Main src={background} logo>
           <LoadingStyled>
             <p>{props.data.content}</p>
             <p>{props.data.loading}</p>
@@ -19,7 +21,7 @@ const Loading = () => {
 };
 
 const LoadingStyled = styled.div`
-  color: red;
+  color: black;
 `;
 
 export default Loading;
