@@ -9,6 +9,7 @@ import Home from "./components/layouts/Home";
 import Loading from "./components/layouts/Loading";
 import Navigation from "./components/layouts/Navigation";
 import NavigationDetail from "./components/layouts/NavigationDetail";
+import SecureRouter from "./components/layouts/SecureRouter";
 
 const App = () => {
   return (

@@ -9,6 +9,7 @@ const Navigation = () => {
         <NavigationStyled>
           <p>{props.data.content}</p>
           <p>{props.data.loading}</p>
+          <p>Navigation</p>
         </NavigationStyled>
       )}
     </DataContext.Consumer>
