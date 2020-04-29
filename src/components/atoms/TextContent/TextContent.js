@@ -52,7 +52,7 @@ TextContent.defaultProps = {
 TextContent.propTypes = {
   position: PropTypes.oneOf(["left", "right"]),
   children: PropTypes.node.isRequired,
-  testid: PropTypes.string.isRequired,
+  testid: PropTypes.string,
 };
 
 export default TextContent;

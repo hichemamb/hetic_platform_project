@@ -17,6 +17,7 @@ const ImagesGroup = ({ sources, testid }) => {
       <ImagesGroupStyled>
         {withoutImageSelected.map((source) => (
           <Image
+            key={`${source}`}
             size="small"
             src={source}
             testid="image"

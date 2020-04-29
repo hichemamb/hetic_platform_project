@@ -34,7 +34,7 @@ Image.defaultProps = {
 Image.propTypes = {
   size: PropTypes.oneOf(["small", "large"]),
   testid: PropTypes.string,
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   onClick: PropTypes.func,
 };
 
