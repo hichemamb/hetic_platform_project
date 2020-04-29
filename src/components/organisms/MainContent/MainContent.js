@@ -52,7 +52,7 @@ MainContent.propTypes = {
   sources: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   subText: PropTypes.string.isRequired,
-  position: PropTypes.oneOf(["left,right"]),
+  position: PropTypes.oneOf(["left", "right"]),
   children: PropTypes.element.isRequired,
 };
 

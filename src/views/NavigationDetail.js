@@ -31,6 +31,7 @@ const NavigationDetail = () => {
           <Header>
             {allSlugs.map((slug) => (
               <Link
+                key={slug.name}
                 isActive={slug.name === currentData.slug}
                 onClick={() =>
                   history.push(`/navigation/${element}/${slug.id}`)
@@ -54,7 +55,6 @@ const NavigationDetail = () => {
               title={currentData.Title}
               subText={currentData.SubTitle}
               sources={sources}
-              position="right"
             >
               <span>{currentData.Description}</span>
             </MainContent>

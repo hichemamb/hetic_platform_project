@@ -34,14 +34,16 @@ const ButtonLinkBack = ({ title, width, height, onClick }) => {
 ButtonLinkBack.displayName = "ButtonLinkBack";
 ButtonLinkBack.defaultProps = {
   title: "Default",
-  width: "Default",
-  height: "Default",
+  width: "default",
+  height: "default",
+  onClick: () => alert("ButtonLinkBack"),
 };
 
 ButtonLinkBack.propTypes = {
-  title: PropTypes.oneOf(["Default"]),
-  width: PropTypes.oneOf(["Default" | "medium" | "large"]),
-  height: PropTypes.oneOf(["Default" | "medium" | "large"]),
+  title: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  width: PropTypes.oneOf(["default", "medium", "large"]),
+  height: PropTypes.oneOf(["default", "medium", "large"]),
 };
 
 export default ButtonLinkBack;

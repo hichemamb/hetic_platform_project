@@ -35,9 +35,12 @@ const HeaderStyled = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
+Header.defaultProps = {
+  onClickHome: () => alert("Home"),
+};
 Header.propTypes = {
-  children: PropTypes.element.isRequired,
-  onClickHome: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
+  onClickHome: PropTypes.func,
 };
 
 export default Header;

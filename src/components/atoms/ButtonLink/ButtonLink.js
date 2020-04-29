@@ -58,6 +58,7 @@ ButtonLink.defaultProps = {
   position: "left",
   width: "default",
   height: "default",
+  onClick: () => alert("button link"),
 };
 
 ButtonLink.propTypes = {

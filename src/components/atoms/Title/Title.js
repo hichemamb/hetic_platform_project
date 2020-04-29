@@ -61,7 +61,6 @@ Title.propTypes = {
   size: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   showLine: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
 };
 
 export default Title;
