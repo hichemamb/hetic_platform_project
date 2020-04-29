@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/navigation/:element/:id">
             <NavigationDetail />
           </Route>
-          <Route path="/navigation/">
+          <Route path="/navigation">
             <Navigation />
           </Route>
           <Route path="*">

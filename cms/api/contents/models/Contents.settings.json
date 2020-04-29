@@ -3,7 +3,7 @@
   "collectionName": "contents",
   "info": {
     "name": "contents",
-    "description": "portfolio contents"
+    "description": "contents portfolios"
   },
   "options": {
     "increments": true,
@@ -11,27 +11,25 @@
     "comment": ""
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "url": {
+    "SubTitle": {
       "type": "string"
-    },
-    "date": {
-      "type": "date"
-    },
-    "cover": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload"
     },
     "pictures": {
       "collection": "file",
       "via": "related",
       "plugin": "upload"
     },
-    "contents": {
+    "Description": {
       "type": "text"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }
