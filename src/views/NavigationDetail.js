@@ -23,7 +23,7 @@ const NavigationDetail = () => {
   const sources = currentData.pictures.map(
     (el) => `http://localhost:1337/${el.url}`
   );
-  console.log(allSlugs);
+
   return (
     <DataContext.Consumer>
       {(props) => (
@@ -36,7 +36,7 @@ const NavigationDetail = () => {
                   history.push(`/navigation/${element}/${slug.id}`)
                 }
               >
-                {slug.name}
+                <span>{slug.name}</span>
               </Link>
             ))}
           </Header>
@@ -54,8 +54,9 @@ const NavigationDetail = () => {
               title={currentData.Title}
               subText={currentData.SubTitle}
               sources={sources}
+              position="right"
             >
-              {currentData.Description}
+              <span>{currentData.Description}</span>
             </MainContent>
           </div>
         </NavigationDetailStyled>
