@@ -16,20 +16,17 @@ const App = () => {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
           <Route path="/loading">
             <Loading />
           </Route>
-          <Route path="/navigation/:element/:id">
+          <SecureRouter path="/navigation/:element/:id">
             <NavigationDetail />
-          </Route>
-          <Route path="/navigation">
+          </SecureRouter>
+          <SecureRouter path="/navigation">
             <Navigation />
-          </Route>
+          </SecureRouter>
           <Route path="*">
-            <Redirect to="/" />
+            <Redirect to="/loading" />
           </Route>
         </Switch>
       </Router>

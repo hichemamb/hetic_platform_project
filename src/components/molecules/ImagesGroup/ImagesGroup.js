@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Image from "../../atoms/Image/Image";
 
 const ImagesGroup = ({ sources, testid }) => {
-  const [mainSource, setMainSource] = useState(sources[0]);
-  const withoutImageSelected = sources.filter(
-    (source) => source !== mainSource
-  );
+  const [mainSource, setMainSource] = useState(null);
+  const [index, setIndex] = useState(0);
 
-  const changeSource = (s) => setMainSource(s);
+  const withoutImageSelected = sources.filter((source, i) => i !== index);
+
+  const changeSource = (s) => setIndex(s);
 
   return (
     <ImagesGroupParentStyled data-testid={testid}>
-      <Image size="large" src={mainSource} testid="image" />
+      <Image size="large" src={sources[index]} testid="image" />
       <ImagesGroupStyled>
         {withoutImageSelected.map((source) => (
           <Image

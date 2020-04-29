@@ -7,9 +7,11 @@ import "../../../assets/fonts/fonts.css";
 const Header = ({ onClickHome, children }) => {
   return (
     <HeaderParentStyled>
-      <Link isActive={true} onClick={onClickHome}>
-        MJ23
-      </Link>
+      <div className="header-logo">
+        <Link isActive={true} onClick={onClickHome}>
+          MJ23
+        </Link>
+      </div>
       <HeaderStyled>{children}</HeaderStyled>
     </HeaderParentStyled>
   );
@@ -19,9 +21,10 @@ const HeaderParentStyled = styled.div`
   width: 110px;
   height: 100vh;
   border-right: 1px solid white;
-  :first-of-type {
+  .header-logo {
     position: absolute;
     top: 0;
+    left: 24px;
     text-align: center;
   }
 `;
