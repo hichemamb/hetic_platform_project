@@ -14,26 +14,35 @@ const MainLink = ({ size, children, type, onClick, testid }) => {
   };
   let newChildren = fourTimes(children, onClick);
   return (
-    <StyledMainLink>
-      <Link data-testid={testid} onClick={onClick}>
-        {children}{" "}
-      </Link>
-      {newChildren
-        .map((_, i) => (
-          <LinkDecoration key={i} opacity={i / newChildren.length}>
-            {children}
-          </LinkDecoration>
-        ))
-        .reverse()}
-    </StyledMainLink>
+    <StyledContainer>
+      <StyledMainLink>
+        <Link data-testid={testid} onClick={onClick}>
+          {children}{" "}
+        </Link>
+        {newChildren
+          .map((_, i) => (
+            <LinkDecoration key={i} opacity={i / newChildren.length}>
+              {children}
+            </LinkDecoration>
+          ))
+          .reverse()}
+      </StyledMainLink>
+    </StyledContainer>
   );
 };
 
+const StyledContainer =  styled.div`
+  width: 100%;
+  transition: 200ms all ease;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+
 const StyledMainLink = styled.span`
-  height: 405px;
-  width: 553px;
-  font-family: Chakra Petch;
   position: relative;
+  font-family: Chakra Petch;
   transition: all ease 0.4s;
   text-transform: uppercase;
   font-weight: bold;
@@ -41,17 +50,12 @@ const StyledMainLink = styled.span`
 `;
 const Link = styled.span`
   color: white;
-  position: absolute;
+  position: relative;
   top: 0;
   font-family: Chakra Petch;
   z-index: 100;
   -webkit-text-stroke: 1px white;
   color: none;
-  transition: 200ms all ease;
-  cursor: pointer;
-  :hover {
-    transform: scale(1.1);
-  }
 `;
 const LinkDecoration = styled.span`
   opacity: ${(props) => props.opacity};
@@ -61,6 +65,7 @@ const LinkDecoration = styled.span`
   font-family: Chakra Petch;
   color: rgba(0, 0, 0, 0);
   top: ${(props) => (props.opacity * 3000) / Math.exp(props.opacity * 5)}px;
+  left: 0;
 `;
 MainLink.displayName = "MainLink";
 

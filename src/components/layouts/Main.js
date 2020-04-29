@@ -13,7 +13,7 @@ const Main = ({ src, logo, children, backgroundColor }) => {
           MJ23
         </Link>
       </div>
-      <div>{children}</div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>{children}</div>
     </MainStyled>
   );
 };
