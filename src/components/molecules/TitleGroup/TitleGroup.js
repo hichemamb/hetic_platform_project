@@ -20,11 +20,8 @@ TitleGroup.defaultProps = {
 
 TitleGroup.propTypes = {
   title: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  showLine: PropTypes.oneOf([
-    "For to display, choose properties block or none",
-  ]),
-  children: PropTypes.element.isRequired,
+  size: PropTypes.string.isRequired,
+  showLine: PropTypes.string.isRequired
 };
 
 export default TitleGroup;
